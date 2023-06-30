@@ -1,9 +1,5 @@
 rootProject.name = "name"
 
-pluginManagement {
-    plugins {
-        id("jvm")
-    }
-}
-
-include("task1")
+include("csv")
+include("xml")
+include("json")
