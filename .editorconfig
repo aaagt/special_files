@@ -37,6 +37,7 @@ ij_java_doc_add_p_tag_on_empty_lines = false
 ij_java_doc_keep_empty_parameter_tag = true
 ij_java_doc_keep_empty_throws_tag = true
 ij_java_doc_keep_empty_return_tag = true
+ij_java_continuation_indent_size = 8
 
 [*.kt]
 ij_kotlin_allow_trailing_comma = true
