@@ -1,5 +1,5 @@
-rootProject.name = "name"
+rootProject.name = "special-files"
 
-include("csv")
-include("xml")
-include("json")
+include("task1-csv-to-json")
+include("task2-xml-to-json")
+include("task3-json-parser")
