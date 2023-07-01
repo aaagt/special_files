@@ -23,7 +23,7 @@ public class Main {
         final var list = parseCSV(columnMapping, inputFileName);
         final var json = listToJson(list);
         writeString(json, outputFileName);
-    }git status
+    }
 
     private static void writeString(String json, String outputFileName) {
 
