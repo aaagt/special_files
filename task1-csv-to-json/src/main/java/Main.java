@@ -17,13 +17,13 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        String[] columnMapping = {"id", "firstName", "lastName", "country", "age"};
-        String inputFileName = "data.csv";
-        String outputFileName = "data.json";
-        List<Employee> list = parseCSV(columnMapping, inputFileName);
-        String json = listToJson(list);
+        final var columnMapping = new String[]{"id", "firstName", "lastName", "country", "age"};
+        final var inputFileName = "data.csv";
+        final var outputFileName = "data.json";
+        final var list = parseCSV(columnMapping, inputFileName);
+        final var json = listToJson(list);
         writeString(json, outputFileName);
-    }
+    }git status
 
     private static void writeString(String json, String outputFileName) {
 
@@ -50,7 +50,7 @@ public class Main {
         // Создание new TypeToken<...>() {}.getType() передаёт тип определённый
         // во время компиляции (между < и >) в рантайм объект
         // java.lang.reflect.Type.
-        Type listType = new TypeToken<List<Employee>>() {}.getType();
+        final Type listType = new TypeToken<List<Employee>>() {}.getType();
 
         // Преобразование списка в JSON
         return gson.toJson(list, listType);
@@ -72,7 +72,7 @@ public class Main {
                     .withCSVParser(csvParser)
                     .build();
 
-            // Настройки странтегии маппинга файла в Employee объект
+            // Настройки стратегии маппинга файла в Employee объект
             final var mappingStrategy = new ColumnPositionMappingStrategy<Employee>();
             mappingStrategy.setType(Employee.class);
             mappingStrategy.setColumnMapping(columnMapping);
