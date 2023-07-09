@@ -8,6 +8,7 @@ import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.text.DateFormat;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -20,7 +21,11 @@ public class Main {
         employeeList.forEach(System.out::println);
     }
 
-    private static List<Employee> jsonToList(String json) {
+    public static List<Employee> jsonToList(String json) {
+
+        if (json.isEmpty()) {
+            return Collections.emptyList();
+        }
 
         // Сериализатор JSON
         final var gson = new GsonBuilder()
